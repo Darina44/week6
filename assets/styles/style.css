@@ -1,6 +1,45 @@
+.text_cursiv {
+    font-family: 'Yellowtail', sans-serif;
+    font-style: normal;
+    font-size: 2em;
+    color: #7EB693;
+}
+
+.text_bold {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4em;
+    color: #274C5B;
+}
+
+.thirdblock>.text_bold {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3em;
+    color: #274C5B;
+}
+
+.text_basic {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-size: 0.9em;
+    color: rgba(82, 92, 96, 1)B;
+    line-height: 32px;
+    letter-spacing: 0.36px;
+}
+
+.text_basich {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 1.1em;
+    color: #274C5B;
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-rows: 150px 1fr 15%;
     grid-template-columns: 1fr;
@@ -48,12 +87,16 @@ body {
 .main {
     grid-area: 2/1/3/2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 3fr;
+    grid-template-areas:
+    "fb fb"
+    "sb1 sb2"
+    "thb thb";
+    justify-content: stretch;
+    justify-items: center;
 }
 
 .firstblock {
-    grid-area: 1/1/2/3;
+    grid-area: fb;
     background-image: url(../images/backcround1.png);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -61,23 +104,8 @@ body {
     padding: 15% 0;
 }
 
-p.firstblock__text {
+.firstblock__text>p {
 margin: 2% 2%;
-}
-
-.text_cursiv {
-    font-family: 'Yellowtail', sans-serif;
-    font-style: normal;
-    font-size: 2em;
-    color: #7EB693;
-}
-
-.text_bold {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 4em;
-    color: #274C5B;
 }
 
 .firstblock__button {
@@ -89,3 +117,27 @@ margin: 2% 2%;
     margin-left: 2%;
 }
 
+.secondblog__image1 {
+    grid-area: sb1;
+    width: 90%;
+    margin: 15% 2%;
+}
+.secondblog__image2 {
+    grid-area: sb2;
+    width: 90%;
+    margin: 15% 2%;
+}
+
+.thirdblock {
+    grid-area: thb ;
+    background-image: url(../images/imagepage3.png);
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.thirdblock__text{
+    display: grid;
+    grid-template-areas: 
+    "";
+
+}
