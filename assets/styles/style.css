@@ -135,9 +135,32 @@ margin: 2% 2%;
     width: 100%;
 }
 
+.thirdblock__padding{
+    padding-left: 50%;
+}
+
 .thirdblock__text{
     display: grid;
     grid-template-areas: 
-    "";
+    "img texth texth texth texth texth texth"
+    "img text text text text text text"
+    "img text text text text text text";
+    align-items: center;
+    align-content: stretch;
+    /* justify-content: stretch; */
+}
 
+.thirdblock__text__h {
+    grid-area: texth;
+    margin: 0;
+}
+
+.thirdblock__text__basic {
+    grid-area: text;
+    margin: 0%;
+}
+
+.thirdblock__text__img {
+    grid-area: img;
+    width: 40%;
 }
